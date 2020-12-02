@@ -1,0 +1,53 @@
+.About {
+  scroll-margin: 60px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.about_content {
+}
+.about_content h2 {
+  font-size: 35px;
+  line-height: 45px;
+  font-weight: 700;
+}
+
+.about_content h6 {
+  color: #999;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+.about_content p {
+  padding-bottom: 30px;
+}
+.about_content .theme_btn + .theme_btn {
+  margin-left: 15px;
+}
+.theme_btn {
+  font-size: 20px;
+  font-weight: 500;
+  color: #040c2c;
+  font-family: Montserrat, sans-serif;
+  border: 2px solid #040c2c;
+  padding: 10px 36px;
+  border-radius: 3px;
+  position: relative;
+  background: linear-gradient(to right, #040c2c 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+  min-width: 140px;
+  text-align: center;
+  display: inline-block;
+}
+.theme_btn:hover {
+  background-position: left bottom;
+  color: white;
+}

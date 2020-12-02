@@ -1,0 +1,28 @@
+.card_item {
+  text-align: center;
+  border: 1px solid #f3f1f1;
+  background: #fff;
+  padding: 40px 25px 30px;
+  margin-bottom: 30px;
+  transition: all 0.4s linear;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1);
+}
+.card_item i {
+  border: 1px solid #8a8a8a;
+  border-radius: 50%;
+  color: #8a8a8a;
+  font-size: 32px;
+  height: 80px;
+  line-height: 80px;
+  margin-bottom: 20px;
+  width: 80px;
+  transition: all 0.3s linear 0s;
+  display: inline-block;
+}
+.card_item h2 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
+  padding-bottom: 5px;
+  transition: color 0.3s linear;
+}

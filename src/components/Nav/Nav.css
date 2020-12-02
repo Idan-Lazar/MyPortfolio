@@ -1,0 +1,91 @@
+.nav {
+  width: 100%;
+  top: 0;
+  transform: translateY(0);
+  position: fixed;
+  z-index: 1001;
+  transition: all 0.3s ease-in-out;
+  flex-flow: row nowrap;
+  margin-top: 10px;
+  justify-content: flex-start;
+}
+.nav_fixed {
+  background: #fff;
+  box-shadow: 0 2px 35px 0 rgba(0, 0, 0, 0.1);
+  top: 0;
+  margin-top: 0;
+}
+.nav_container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+}
+.navbar-brand {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  margin-left: 10px;
+  padding-bottom: 0.3125rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+.collapse {
+  flex-grow: 1;
+  align-items: center;
+  display: flex !important;
+  flex-basis: auto;
+}
+.collapse-nav {
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  margin: auto !important;
+}
+.nav-item {
+  margin-left: 35px;
+}
+.nav-ref {
+  font: 600 14px/30px Montserrat, sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.active:after {
+  width: 100%;
+  left: 0;
+}
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #000;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after {
+  width: 100%;
+  left: 0;
+}
+@media screen and (max-width: 767px) {
+  .navbar-nav {
+    display: none;
+  }
+}
