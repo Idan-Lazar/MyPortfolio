@@ -1,0 +1,13 @@
+.contact_info .item {
+    display: flex;
+    align-items: center;
+    
+}
+.contact_info .item+.item {
+    padding-top: 15px;
+}
+.contact_info .list .item .icon {
+    color: #494949;
+    text-align: center;
+    margin-right: 10px;
+}

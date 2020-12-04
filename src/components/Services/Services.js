@@ -6,7 +6,7 @@ const Services = () => {
   const renderCards = () => {
     return cards.map((card, index) => {
       return (
-        <Card icon={card.icon} title={card.title} content={card.content} />
+        <Card key={index} icon={card.icon} title={card.title} content={card.content} />
       );
     });
   };

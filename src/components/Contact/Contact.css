@@ -1,0 +1,38 @@
+.Contact{
+    padding: 120px 0;
+    scroll-margin: 60px;
+}
+.contact_info {
+    padding-left: 50px;
+}
+.row h4 {
+    font: 700 35px/40px Montserrat,sans-serif;
+    color: #040c2c;
+    text-transform: capitalize;
+    padding-bottom: 24px;
+    display: flex;
+}
+
+.contact_info .list {
+    display: block;
+    padding-right: 60px;
+}
+
+
+.text-contact {
+    white-space: nowrap;
+    font-size: 19px!important;
+    font-weight: 700!important;
+    color: #111!important;
+}
+@media screen and (max-width: 767px) {
+    .Contact{
+        padding: 20px 0;
+    }
+    .contact_info {
+        padding-left: 0px;
+    }
+    .row h4 {
+        padding-top: 50px;
+    }
+  }

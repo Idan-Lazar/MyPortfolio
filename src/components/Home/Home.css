@@ -61,6 +61,9 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .container {
+    max-width: 100%;
+}
   .react-parallax.banner_area {
     min-height: 500px;
   }

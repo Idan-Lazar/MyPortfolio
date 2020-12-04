@@ -85,7 +85,10 @@ a:hover:after {
   left: 0;
 }
 @media screen and (max-width: 767px) {
-  .navbar-nav {
-    display: none;
+  .collapse {
+    display: none !important;
+  }
+  .nav_fixed{
+    display: none !important;
   }
 }

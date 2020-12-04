@@ -1,0 +1,11 @@
+.footer {
+    background: #040c2c;
+    position: relative;
+    padding: 110px 0;
+}
+.footer_content{
+    text-align: center;
+}
+.footer-content .logo {
+    display: inline-block;
+}

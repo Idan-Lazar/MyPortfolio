@@ -36,3 +36,17 @@ export const cards = [
       "Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be fast as possible.",
   },
 ];
+export const personalDetails = [
+  {
+    icon: "https://unpkg.com/@icon/elegant-icons/icons/icon_pin_alt.svg",
+    title: "Address: Yavne, Israel",
+  },
+  {
+    icon: "https://unpkg.com/@icon/elegant-icons/icons/icon_phone.svg",
+    title: "Phone: 054-8370965",
+  },
+  {
+    icon: "https://unpkg.com/@icon/elegant-icons/icons/icon_mail.svg",
+    title: "Email: Idanlazar8241@Gmail.com",
+  },
+]

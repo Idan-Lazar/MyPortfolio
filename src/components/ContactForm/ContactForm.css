@@ -1,0 +1,61 @@
+.form-control {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #494949;
+    box-shadow: none;
+    border: 1px solid #ededed;
+    border-radius: 0;
+    padding-left: 20px;
+    text-transform: capitalize;
+    min-height: 44px;
+}
+textarea.form-control {
+    resize: none;
+    height: 142px;
+    padding-top: 12px;
+    margin-bottom: 30px;
+}
+.text-danger {
+    color: #dc3545!important;
+    display: flex;
+    margin-bottom: 30px;
+}
+.theme_button {
+    font-size: 20px;
+    font-weight: 500;
+    color: #040c2c;
+    font-family: Montserrat,sans-serif;
+    border: 2px solid #040c2c;
+    padding: 10px 36px;
+    border-radius: 3px;
+    position: relative;
+   
+    cursor: pointer;
+    min-width: 140px;
+    text-align: center;
+    display: inline-block;
+}
+
+.send_button {
+    font-size: 16px;
+    border-radius: 4px;
+    color: #040c2c;
+    padding: 14px 38px 14px 42px;
+    font-family: Montserrat,sans-serif;
+    font-weight: 500;
+    background: transparent;
+    box-shadow: none;
+    display: flex;
+    background: linear-gradient(to right, #040c2c 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.5s ease-out;
+}
+.send_button:hover {
+    background-position: left bottom;
+    color: white;
+  }
+  .button_disabled {
+    opacity: .65;
+}
