@@ -2,6 +2,7 @@
   "name": "myportfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://main.d2xodatt7yrtg6.amplifyapp.com/",
   "dependencies": {
     "@icon/elegant-icons": "0.0.1-alpha.4",
     "@testing-library/jest-dom": "^5.11.6",

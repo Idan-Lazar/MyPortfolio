@@ -1,13 +1,12 @@
 import React from "react";
 import { Fade } from "react-reveal";
-import cv from '../../resources/Idan Lazar CV.pdf';
 import "./About.css";
 
 const About = () => {
   const onHireClick = () => {
     document
       .getElementsByClassName("Contact")[0]
-      .scrollIntoView({ behavior: "smooth"});
+      .scrollIntoView({ behavior: "smooth" });
   };
   return (
     <div className="About">
@@ -27,8 +26,19 @@ const About = () => {
               </p>
             </Fade>
             <Fade mode="fill">
-              <button className="theme_btn" onClick={() => onHireClick()}>Hire Me</button>
-              <a href={cv} className="theme_btn" download>Download CV</a>
+              <button className="theme_btn" onClick={() => onHireClick()}>
+                Hire Me
+              </button>
+              <a
+                rel="noreferrer"
+                target="_blank"
+                href={
+                  "https://drive.google.com/file/d/1SQXUT1AVyrrbO_XkHGtM6Vnfspy7PGg-/view?usp=sharing"
+                }
+                className="theme_btn"
+              >
+                View Resume
+              </a>
             </Fade>
           </div>
         </div>
