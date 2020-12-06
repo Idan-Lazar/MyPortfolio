@@ -51,6 +51,7 @@ textarea.form-control {
     background-size: 200% 100%;
     background-position: right bottom;
     transition: all 0.5s ease-out;
+    margin-bottom: 20px;
 }
 .send_button:hover {
     background-position: left bottom;

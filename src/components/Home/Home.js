@@ -4,6 +4,7 @@ import { Parallax } from "react-parallax";
 import { Fade } from "react-reveal";
 import background from "../../resources/home.jpg";
 import Typing from "react-typing-animation";
+import SocialButtons from "../SocialButtons/SocialButtons";
 
 const Home = () => {
   return (
@@ -26,6 +27,9 @@ const Home = () => {
               </h3>
             </Fade>
           </div>
+        </div>
+        <div className="social">
+          <SocialButtons />
         </div>
       </Parallax>
     </div>

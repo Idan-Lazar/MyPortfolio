@@ -1,0 +1,23 @@
+
+.social_icon {
+    width: 45px;
+    height: 45px;
+    line-height: 40px;
+    border-radius: 50%;
+    background: rgba(0,0,0,.3);
+    display: inline-block;
+    color: #fff;
+    transition: all .3s linear;
+    text-align: center;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.i{
+  fill: #ffffff
+}
+.social_icon:hover {
+  background: white;
+}
+.i:hover{
+  fill: #000000
+}

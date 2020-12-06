@@ -1,5 +1,5 @@
 .Contact{
-    padding: 120px 0;
+    padding: 105px 0;
     scroll-margin: 60px;
 }
 .contact_info {
@@ -25,7 +25,7 @@
     font-weight: 700!important;
     color: #111!important;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 800px) {
     .Contact{
         padding: 20px 0;
     }

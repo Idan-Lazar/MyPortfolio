@@ -1,16 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import emailjs from "emailjs-com";
+import Alert from "react-bootstrap/Alert";
 import clsx from "clsx";
 import "./ContactForm.css";
 const ContactForm = () => {
-  const { register, handleSubmit, watch, errors } = useForm({
+  const [isEmailSent, setIsEmailSent] = useState(false);
+  const { register, handleSubmit, errors } = useForm({
     mode: "onSubmit",
     reValidateMode: "onChange",
   });
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    console.log(data);
+    await emailjs
+      .send(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        data,
+        process.env.REACT_APP_USER_ID
+      )
+      .then(() => {
+        setIsEmailSent(true);
+        document.getElementById("contact_form").reset();
+      });
+  };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form id="contact_form" onSubmit={handleSubmit(onSubmit)}>
       <div className="row">
         <div className="col-lg-6">
           <input
@@ -29,7 +45,7 @@ const ContactForm = () => {
             className="form-control"
             ref={register({
               required: true,
-              pattern: /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i,
+              pattern: /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i,
             })}
             placeholder="Your Email*"
           />
@@ -67,6 +83,11 @@ const ContactForm = () => {
       >
         Send Message
       </button>
+      {isEmailSent && (
+        <Alert variant={"success"}>
+          The request has been sent, I will contact you soon
+        </Alert>
+      )}
     </form>
   );
 };

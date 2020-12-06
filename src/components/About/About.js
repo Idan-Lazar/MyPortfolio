@@ -1,9 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Fade } from "react-reveal";
 import "./About.css";
 
 const About = () => {
-
+  const onHireClick = () => {
+    document
+      .getElementsByClassName("Contact")[0]
+      .scrollIntoView({ behavior: "smooth"});
+  };
   return (
     <div className="About">
       <div className="container">
@@ -22,8 +26,8 @@ const About = () => {
               </p>
             </Fade>
             <Fade mode="fill">
-              <div className="theme_btn">Hire Me</div>
-              <div className="theme_btn">Download CV</div>
+              <button className="theme_btn" onClick={() => onHireClick()}>Hire Me</button>
+              <a href="/Idan Lazar CV.pdf" target='_blank' className="theme_btn" download>Download CV</a>
             </Fade>
           </div>
         </div>

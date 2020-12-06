@@ -59,16 +59,14 @@
   width: 100%;
   left: 0;
 }
-a {
+.collapse-nav a {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.15em;
-
   display: inline-block;
-  padding: 15px 20px;
   position: relative;
 }
-a:after {
+.collapse-nav a:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -80,11 +78,11 @@ a:after {
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
-a:hover:after {
+.collapse-nav a:hover:after {
   width: 100%;
   left: 0;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 800px) {
   .collapse {
     display: none !important;
   }
