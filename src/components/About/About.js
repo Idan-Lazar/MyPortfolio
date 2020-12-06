@@ -1,5 +1,6 @@
 import React from "react";
 import { Fade } from "react-reveal";
+import cv from '../../resources/Idan Lazar CV.pdf';
 import "./About.css";
 
 const About = () => {
@@ -27,7 +28,7 @@ const About = () => {
             </Fade>
             <Fade mode="fill">
               <button className="theme_btn" onClick={() => onHireClick()}>Hire Me</button>
-              <a href="/Idan Lazar CV.pdf" target='_blank' className="theme_btn" download>Download CV</a>
+              <a href={cv} className="theme_btn" download>Download CV</a>
             </Fade>
           </div>
         </div>
