@@ -55,6 +55,7 @@ const Nav = () => {
             height={50}
             width={50}
             alt="logo"
+            onClick={() => document.getElementsByClassName("Home")[0].scrollIntoView()}
           />
         </div>
         <div className="collapse">
