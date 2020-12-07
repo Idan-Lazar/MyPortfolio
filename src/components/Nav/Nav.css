@@ -56,18 +56,14 @@
   cursor: pointer;
   transition: all 0.2s linear;
 }
-.nav-item .active:after {
-  width: 100%;
-  left: 0;
-}
-.collapse-nav a {
+.collapse-nav .nav-ref {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.15em;
   display: inline-block;
   position: relative;
 }
-.collapse-nav a:after {
+.collapse-nav .nav-ref:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -79,7 +75,11 @@
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
-.collapse-nav a:hover:after {
+.collapse-nav .nav-ref:hover:after {
+  width: 100%;
+  left: 0;
+}
+.collapse-nav .active:after {
   width: 100%;
   left: 0;
 }

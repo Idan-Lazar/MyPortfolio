@@ -6,12 +6,8 @@ import clsx from "clsx";
 import "./ContactForm.css";
 const ContactForm = () => {
   const [isEmailSent, setIsEmailSent] = useState(false);
-  const { register, handleSubmit, errors } = useForm({
-    mode: "onSubmit",
-    reValidateMode: "onChange",
-  });
+  const { register, handleSubmit, errors } = useForm();
   const onSubmit = async (data) => {
-    console.log(data);
     await emailjs
       .send(
         process.env.REACT_APP_SERVICE_ID,

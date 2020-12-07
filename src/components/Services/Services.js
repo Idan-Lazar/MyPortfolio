@@ -1,10 +1,10 @@
 import React from "react";
-import { cards } from "../../data";
+import { services } from "../../data";
 import Card from "../Card/Card";
 import "./Services.css";
 const Services = () => {
   const renderCards = () => {
-    return cards.map((card, index) => {
+    return services.map((card, index) => {
       return (
         <Card key={index} icon={card.icon} title={card.title} content={card.content} />
       );

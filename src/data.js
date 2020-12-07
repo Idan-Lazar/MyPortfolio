@@ -1,4 +1,28 @@
-export const cards = [
+export const data = {
+  name: "Idan Lazar",
+  description: "Full Stack Web Developer",
+  skills: [
+    "Front-End Development",
+    "Back-End Development",
+    "React JS",
+    "Node JS",
+    "UX/UI",
+    "HTML + CSS + JS",
+  ],
+  about: {
+    title: "Hey, I am Idan Lazar. Nice to meet you.",
+    content:
+      "Since the beginning of my journey as a freelance Web Developer nearly 3 years ago, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my skills one step at a time.",
+    resume:
+      "https://drive.google.com/file/d/1SQXUT1AVyrrbO_XkHGtM6Vnfspy7PGg-/view?usp=sharing",
+  },
+  social: {
+    github: "https://github.com/lazarid",
+    whatsapp: "https://wa.me/972548370965",
+  },
+  ContactElement: "Contact"
+};
+export const services = [
   {
     icon: "icon-desktop",
     title: "Web Design",
@@ -36,6 +60,14 @@ export const cards = [
       "Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be fast as possible.",
   },
 ];
+export const tabs = [
+  "Home",
+  "About",
+  "Services",
+  "Portfolio",
+  "testimonial",
+  "Contact",
+];
 export const personalDetails = [
   {
     icon: "https://unpkg.com/@icon/elegant-icons/icons/icon_pin_alt.svg",
@@ -49,4 +81,4 @@ export const personalDetails = [
     icon: "https://unpkg.com/@icon/elegant-icons/icons/icon_mail.svg",
     title: "Email: Idanlazar8241@Gmail.com",
   },
-]
+];

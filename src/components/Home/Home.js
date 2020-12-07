@@ -5,6 +5,7 @@ import { Fade } from "react-reveal";
 import background from "../../resources/home.jpg";
 import Typing from "react-typing-animation";
 import SocialButtons from "../SocialButtons/SocialButtons";
+import { data } from '../../data'
 
 const Home = () => {
   return (
@@ -14,15 +15,17 @@ const Home = () => {
           <div className="banner_content">
             <Fade bottom>
               <h5>Hello</h5>
-              <h2>I am Idan Lazar</h2>
-              <h4>Full Stack Web Developer</h4>
+              <h2>I am {data.name}</h2>
+              <h4>{data.description}</h4>
               <h3>
                 Specialized in&nbsp;
                 <Typing loop={true} hideCursor={true}>
-                  <span>Front-End Development.</span>
-                  <Typing.Backspace count={30} delay={500} />
-                  <span>Back-End Development.</span>
-                  <Typing.Backspace count={21} delay={500} />
+                  {data.skills.map((skill)=>{
+                    return (<>
+                    <span>{skill}.</span>
+                    <Typing.Backspace count={30} delay={500} />
+                    </>)
+                  })}
                 </Typing>
               </h3>
             </Fade>

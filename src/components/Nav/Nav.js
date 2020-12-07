@@ -1,17 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { tabs } from '../../data'
 import "./Nav.css";
 import clsx from "clsx";
-const tabs = [
-  "Home",
-  "About",
-  "Services",
-  "Portfolio",
-  "testimonial",
-  "Contact",
-];
 
 const Nav = () => {
-  const [tab, setTab] = useState("Home");
+  const [tab, setTab] = useState(tabs[0]);
   const [onTop, setOnTop] = useState(true);
 
   const onTabClick = (tabName) => {
@@ -28,9 +21,9 @@ const Nav = () => {
           onClick={() => onTabClick(tabName)}
           key={index}
         >
-          <a className={clsx("nav-ref", tab === tabName && "active")}>
+          <div className={clsx("nav-ref", tab === tabName && "active")}>
             {tabName}
-          </a>
+          </div>
         </li>
       );
     });
@@ -55,7 +48,7 @@ const Nav = () => {
             height={50}
             width={50}
             alt="logo"
-            onClick={() => document.getElementsByClassName("Home")[0].scrollIntoView()}
+            onClick={() => document.getElementsByClassName(tabs[0])[0].scrollIntoView()}
           />
         </div>
         <div className="collapse">
