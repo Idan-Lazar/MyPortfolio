@@ -50,7 +50,6 @@ const ContactForm = () => {
               (errors.email?.type === "pattern" && "please input valid email")}
           </p>
         </div>
-        {console.log(errors.email)}
         <div className="col-lg-12">
           <input
             name="subject"

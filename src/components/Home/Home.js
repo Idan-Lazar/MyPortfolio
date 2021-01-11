@@ -20,11 +20,11 @@ const Home = () => {
               <h3>
                 Specialized in&nbsp;
                 <Typing loop={true} hideCursor={true}>
-                  {data.skills.map((skill)=>{
-                    return (<>
+                  {data.skills.map((skill,index)=>{
+                    return (<div key={index}>
                     <span>{skill}.</span>
                     <Typing.Backspace count={30} delay={500} />
-                    </>)
+                    </div>)
                   })}
                 </Typing>
               </h3>
