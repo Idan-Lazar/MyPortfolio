@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'et-line';
 import ReactGA from 'react-ga';
-ReactGA.initialize(process.env.REACT_APP_GA);
+ReactGA.initialize(process.env.REACT_APP_GA || 'G-Q5B3C662G6');
 
 
 ReactDOM.render(
