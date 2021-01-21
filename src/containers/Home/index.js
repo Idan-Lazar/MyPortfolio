@@ -4,7 +4,7 @@ import { Parallax } from "react-parallax";
 import { Fade } from "react-reveal";
 import background from "../../resources/home.jpg";
 import Typing from "react-typing-animation";
-import SocialButtons from "../SocialButtons/SocialButtons";
+import SocialButtons from "../../components/SocialButtons/SocialButtons";
 import { data } from '../../data'
 
 const Home = () => {

@@ -1,6 +1,7 @@
 import React from "react";
 import { Fade } from "react-reveal";
 import { data } from "../../data";
+import eventGA from '../../utils/ga'
 import "./About.css";
 
 const About = () => {
@@ -28,6 +29,7 @@ const About = () => {
                 target="_blank"
                 href={data.about.resume}
                 className="theme_btn"
+                onClick={() => eventGA('About Click','About','View Resume')}
               >
                 View Resume
               </a>

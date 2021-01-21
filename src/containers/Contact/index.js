@@ -1,7 +1,7 @@
 import React from "react";
 import { personalDetails } from "../../data";
-import ContactForm from "../ContactForm/ContactForm";
-import ListItem from "../ListItem/ListItem";
+import ContactForm from "../../components/ContactForm/ContactForm";
+import ListItem from "../../components/ListItem/ListItem";
 import "./Contact.css";
 const Contact = () => {
   const renderItems = () => {
