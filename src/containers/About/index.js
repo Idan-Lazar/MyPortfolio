@@ -1,13 +1,14 @@
 import React from "react";
 import { Fade } from "react-reveal";
-import { data } from "../../data";
-import eventGA from '../../utils/ga'
+import eventGA from "../../utils/ga";
+import { useTranslation } from "react-i18next";
 import "./About.css";
 
 const About = () => {
+  const { t } = useTranslation();
   const onHireClick = () => {
     document
-      .getElementsByClassName(data.ContactElement)[0]
+      .getElementsByClassName("Contact")[0]
       .scrollIntoView({ behavior: "smooth" });
   };
   return (
@@ -16,22 +17,22 @@ const About = () => {
         <div className="row">
           <div className="about_content">
             <Fade bottom>
-              <h2 className="t_color">About Me</h2>
-              <h6>{data.about.title}</h6>
-              <p>{data.about.content}</p>
+              <h2 className="t_color">{t("data.about.header")}</h2>
+              <h6>{t("data.about.title")}</h6>
+              <p>{t("data.about.content")}</p>
             </Fade>
             <Fade mode="fill">
               <button className="theme_btn" onClick={() => onHireClick()}>
-                Hire Me
+                {t("data.about.hireMe")}
               </button>
               <a
                 rel="noreferrer"
                 target="_blank"
-                href={data.about.resume}
+                href={t("data.about.resume.link")}
                 className="theme_btn"
-                onClick={() => eventGA('About Click','About','View Resume')}
+                onClick={() => eventGA("About Click", "About", "View Resume")}
               >
-                View Resume
+                {t("data.about.resume.title")}
               </a>
             </Fade>
           </div>

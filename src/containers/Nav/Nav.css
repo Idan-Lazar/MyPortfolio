@@ -20,7 +20,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  max-width: 1440px;
+  max-width: 1440px !important;
 }
 .navbar-brand {
   display: inline-block;
@@ -89,5 +89,10 @@
   }
   .nav_fixed{
     display: none !important;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 1000px){
+  .nav-item {
+    margin-left: 16px;
   }
 }

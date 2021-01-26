@@ -17,7 +17,10 @@
     display: block;
     padding-right: 60px;
 }
-
+.he {
+    padding-left: 60px;
+    padding-right: 0px !important;
+}
 
 .text-contact {
     white-space: nowrap;

@@ -4,10 +4,12 @@ import emailjs from "emailjs-com";
 import Alert from "react-bootstrap/Alert";
 import clsx from "clsx";
 import eventGA from '../../utils/ga'
+import { useTranslation } from "react-i18next";
+import validator from 'validator'
 import "./ContactForm.css";
-const emailValidator = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 const ContactForm = () => {
+  const { t } = useTranslation();
   const [isEmailSent, setIsEmailSent] = useState(false);
   const [isError, setIsError] = useState(true);
   const { register, handleSubmit, errors , getValues} = useForm();
@@ -32,7 +34,7 @@ const ContactForm = () => {
     const { email , name , subject } = values
     const isError = !(name?.length > 0 &&
     subject?.length > 0 &&
-    emailValidator.test(email))
+    validator.isEmail(email))
     console.log(isError);
     setIsError (isError);
   }
@@ -45,7 +47,7 @@ const ContactForm = () => {
             name="name"
             className="form-control"
             ref={register({ required: true })}
-            placeholder="Your Name*"
+            placeholder={t('contact.message.body.name')}
             onChange={() =>validateForm()}
           />
           <p className="text-danger">
@@ -61,7 +63,7 @@ const ContactForm = () => {
               pattern: /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i,
             })}
             onChange={() =>validateForm()}
-            placeholder="Your Email*"
+            placeholder={t('contact.message.body.email')}
           />
           <p className="text-danger">
             {(errors.email?.type === "required" && "please input your email") ||
@@ -74,7 +76,7 @@ const ContactForm = () => {
             className="form-control"
             ref={register({ required: true })}
             onChange={() =>validateForm()}
-            placeholder="Subject (Site Project, Fix Bugs,etc)*"
+            placeholder={t('contact.message.body.subject')}
           />
           <p className="text-danger">
             {errors.subject && "please input your subject"}
@@ -86,7 +88,7 @@ const ContactForm = () => {
         name="message"
         className="form-control"
         rows="6"
-        placeholder="Your Message ..."
+        placeholder={t('contact.message.body.context')}
       />
       <button
         className={clsx(
@@ -95,11 +97,11 @@ const ContactForm = () => {
         )}
         type="submit"
       >
-        Send Message
+       {t('contact.message.body.send')}
       </button>
       {isEmailSent && (
         <Alert variant={"success"}>
-          The request has been sent, I will contact you soon
+         {t('contact.message.body.success')}
         </Alert>
       )}
     </form>

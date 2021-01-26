@@ -1,26 +1,35 @@
 import React from "react";
-import { services } from "../../data";
 import Card from "../../components/Card/Card";
+import { useTranslation } from "react-i18next";
 import "./Services.css";
+
 const Services = () => {
+  const { t } = useTranslation();
+
   const renderCards = () => {
-    return services.map((card, index) => {
-      return (
-        <Card key={index} icon={card.icon} title={card.title} content={card.content} />
-      );
-    });
+    return t("services.myServices", { returnObjects: true }).map(
+      (card, index) => {
+        return (
+          <Card
+            key={index}
+            icon={card.icon}
+            title={card.title}
+            content={card.content}
+          />
+        );
+      }
+    );
   };
+
   return (
     <div className="Services">
       <div className="container">
         <div className="section_title text-center">
-          <h2 className="title_h2 t_color">What I'm Doing</h2>
-          <p className="title_p">My services:</p>
+          <h2 className="title_h2 t_color">{t("services.header")}</h2>
+          <p className="title_p">{t("services.title")}</p>
           <span className="bottom_line" />
         </div>
-        <div className="row">
-            {renderCards()}
-        </div>
+        <div className="row">{renderCards()}</div>
       </div>
     </div>
   );
